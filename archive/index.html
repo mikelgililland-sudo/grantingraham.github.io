@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Archive Index — Grant Ingraham</title>
+  <meta name="description" content="Permanent reading archive of Grant Ingraham: books, essays, and topic collections for AI, cybersecurity, and digital life." />
+
+  <style>
+    :root{
+      --bg: #f6f2ea;
+      --panel: #ffffff;
+      --ink: #1f2328;
+      --muted: #5f6b77;
+      --line: #e7dfd2;
+      --card: #fbf8f2;
+      --link: #0b57d0;
+      --link2: #0a3d91;
+      --btn: #ffffff;
+      --shadow: 0 10px 30px rgba(0,0,0,.06);
+      --radius: 18px;
+      --radius2: 14px;
+      --max: 980px;
+      --serif: Georgia, "Times New Roman", Times, serif;
+      --sans: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+
+    *{ box-sizing: border-box; }
+    body{
+      margin:0;
+      font-family: var(--serif);
+      color: var(--ink);
+      background: radial-gradient(1200px 600px at 30% 0%, #fff 0%, var(--bg) 55%, #efe7dc 100%);
+      line-height: 1.55;
+    }
+
+    a{ color: var(--link); text-decoration: none; }
+    a:hover{ text-decoration: underline; color: var(--link2); }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 56px auto;
+      padding: 0 18px;
+    }
+
+    .panel{
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 34px 34px 26px;
+    }
+
+    header{
+      display:flex;
+      align-items:flex-start;
+      justify-content: space-between;
+      gap: 18px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 22px;
+    }
+
+    .brand h1{
+      margin:0;
+      font-size: 52px;
+      letter-spacing: .2px;
+      line-height: 1.02;
+    }
+    .brand .sub{
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .badge{
+      font-family: var(--sans);
+      font-size: 13px;
+      color: #334155;
+      background: #f5f1e8;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 10px 14px;
+      height: fit-content;
+      white-space: nowrap;
+    }
+
+    .intro{
+      margin: 18px 0 0;
+      color: var(--ink);
+      font-size: 18px;
+      max-width: 72ch;
+    }
+
+    .callout{
+      margin-top: 18px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      padding: 18px;
+      display:flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .callout strong{
+      display:block;
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+    .callout .meta{
+      color: var(--muted);
+      font-size: 15px;
+      max-width: 70ch;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap: 10px;
+      padding: 12px 16px;
+      border-radius: 12px;
+      border: 1px solid #cfd7e3;
+      background: var(--btn);
+      font-family: var(--sans);
+      font-weight: 600;
+      font-size: 14px;
+      white-space: nowrap;
+      box-shadow: 0 2px 0 rgba(0,0,0,.03);
+    }
+    .btn:hover{
+      text-decoration:none;
+      border-color:#b9c6da;
+      transform: translateY(-1px);
+    }
+
+    h2{
+      margin: 28px 0 10px;
+      font-size: 30px;
+      line-height: 1.2;
+    }
+    h3{
+      margin: 22px 0 10px;
+      font-size: 20px;
+      font-family: var(--sans);
+      letter-spacing: .2px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 14px;
+      margin-top: 10px;
+    }
+
+    .card{
+      grid-column: span 6;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      padding: 16px 16px 14px;
+      box-shadow: 0 8px 20px rgba(0,0,0,.04);
+    }
+    .card p{
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+      font-family: var(--sans);
+      line-height: 1.45;
+    }
+    .card .title{
+      font-family: var(--sans);
+      font-weight: 800;
+      font-size: 16px;
+      margin:0;
+    }
+
+    .list{
+      margin: 10px 0 0;
+      padding: 0;
+      list-style: none;
+      display:flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .item{
+      display:flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 10px 12px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .item .left{
+      min-width: 240px;
+    }
+    .item .left a{
+      font-family: var(--sans);
+      font-weight: 700;
+      font-size: 15px;
+    }
+    .item .right{
+      color: var(--muted);
+      font-family: var(--sans);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .divider{
+      margin: 26px 0;
+      border: 0;
+      border-top: 1px solid var(--line);
+    }
+
+    footer{
+      margin-top: 18px;
+      color: var(--muted);
+      font-family: var(--sans);
+      font-size: 13px;
+      display:flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 820px){
+      .brand h1{ font-size: 42px; }
+      .card{ grid-column: span 12; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="wrap">
+    <section class="panel">
+      <header>
+        <div class="brand">
+          <h1>Grant Ingraham</h1>
+          <div class="sub">Permanent Reading Archive — Index</div>
+        </div>
+        <div class="badge">GitHub Pages Archive</div>
+      </header>
+
+      <p class="intro">
+        This index page is the table of contents for the permanent archive. It is designed for long-term reference:
+        stable links, clean reading, and organized collections.
+      </p>
+
+      <div class="callout">
+        <div>
+          <strong>For current articles and new publications</strong>
+          <div class="meta">Visit the main author site: <a href="https://blog.grantingraham.me">blog.grantingraham.me</a></div>
+        </div>
+        <a class="btn" href="https://blog.grantingraham.me">Enter the Main Site →</a>
+      </div>
+
+      <h2>Books</h2>
+      <div class="grid">
+        <article class="card">
+          <p class="title"><a href="/content/pages/books.html">Books & Publications</a></p>
+          <p>Master list of books, editions, and links.</p>
+        </article>
+        <article class="card">
+          <p class="title"><a href="/content/pages/ai_prompts.html">AI Prompts</a></p>
+          <p>Everyday prompts for home, work, and creativity (beginner-friendly).</p>
+        </article>
+        <article class="card">
+          <p class="title"><a href="/content/pages/cybersecurity.html">Cybersecurity</a></p>
+          <p>Plain-English safety guidance for browsing, banking, and social media.</p>
+        </article>
+        <article class="card">
+          <p class="title"><a href="https://blog.grantingraham.me">New Releases & Updates</a></p>
+          <p>Latest posts live on the main site (WordPress).</p>
+        </article>
+      </div>
+
+      <hr class="divider" />
+
+      <h2>Topics</h2>
+
+      <h3>AI & Everyday Use</h3>
+      <ul class="list">
+        <li class="item">
+          <div class="left"><a href="/content/pages/artificial-intelligence.html">Artificial Intelligence</a></div>
+          <div class="right">Topic hub</div>
+        </li>
+        <li class="item">
+          <div class="left"><a href="/content/pages/ai-prompt-coach.html">AI Prompt Coach</a></div>
+          <div class="right">Tools & guidance</div>
+        </li>
+      </ul>
+
+      <h3>Cybersecurity & Online Safety</h3>
+      <ul class="list">
+        <li class="item">
+          <div class="left"><a href="/content/pages/cybersecurity.html">Cybersecurity Basics</a></div>
+          <div class="right">Topic hub</div>
+        </li>
+      </ul>
+
+      <h3>Articles & Essays</h3>
+      <ul class="list">
+        <li class="item">
+          <div class="left"><a href="/content/pages/articles-and-posts.html">Articles & Posts</a></div>
+          <div class="right">Archive list</div>
+        </li>
+        <li class="item">
+          <div class="left"><a href="/content/pages/blog-article-quick-reference.html">Blog Quick Reference</a></div>
+          <div class="right">Sortable reference</div>
+        </li>
+      </ul>
+
+      <hr class="divider" />
+
+      <h2>About & Site Information</h2>
+      <ul class="list">
+        <li class="item">
+          <div class="left"><a href="/content/pages/about.html">About</a></div>
+          <div class="right">Author bio</div>
+        </li>
+        <li class="item">
+          <div class="left"><a href="/content/pages/contact.html">Contact</a></div>
+          <div class="right">Ways to reach you</div>
+        </li>
+        <li class="item">
+          <div class="left"><a href="/site-governance.html">Site Governance</a></div>
+          <div class="right">Archive rules & permanence</div>
+        </li>
+      </ul>
+
+      <footer>
+        <div>© <span id="y"></span> Grant Ingraham • Permanent Reading Archive</div>
+        <div><a href="/">Home</a> • <a href="https://blog.grantingraham.me">Main Site</a></div>
+      </footer>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
